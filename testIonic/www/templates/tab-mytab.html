@@ -1,0 +1,43 @@
+
+
+<ion-view view-title="Test">
+
+	 <ion-content class="padding">
+		   <div class="card">
+
+			     <h4>Bonjour {{name}}</h4>
+		</div>
+	<div class="button-bar">
+      <button class="button button-small button-dark" ng-click="showPopup()">Pop-up perso</button>
+      <button class="button button-small button-primary" ng-click="showConfirm()">Confirmation</button>
+      <button class="button button-small button-positive" ng-click="showAlert()">Alerte</button>
+    </div>
+
+    <br>
+    <p>   Plateforme : {{info.platform}} </p>
+    <br>
+    <p>   Version : {{ info.version }}</p>
+    <br>
+
+<ul ng-repeat="users in users">
+<li> Adresse :{{ users.adress}}</li>
+<li> Age :{{ users.age}}</li>
+<li> Avatar{{ users.avatar}}</li>
+<li> id utilisateur :{{ users.idUser}}</li>
+<li> nom de famille {{ users.lastname}}</li>
+<li> ?? :{{ users.motto}}</li>
+<li> Prenom : {{ users.name}}</li>
+<li> Telephone : {{ users.phone}}</li>
+<br>
+</ul>
+
+
+ <map ng-transclude class="google-map" center="marker.position"> 
+
+  <marker position="marker.position" ></marker>
+  
+</map>
+
+
+	 </ion-content>
+
